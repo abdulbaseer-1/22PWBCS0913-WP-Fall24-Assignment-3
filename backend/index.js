@@ -38,6 +38,7 @@ app.use(logger);
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
 app.use('/api/cart', cartRouter);
+
 app.use('/', (req, res) => {
     res.status(200).json("connected succesfully");
 })
