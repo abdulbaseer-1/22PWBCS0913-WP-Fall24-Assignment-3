@@ -1,4 +1,4 @@
-import setting_style from './Settings.module.css';
+import setting_style from './settings.module.css';
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer";
 import axios from 'axios';
