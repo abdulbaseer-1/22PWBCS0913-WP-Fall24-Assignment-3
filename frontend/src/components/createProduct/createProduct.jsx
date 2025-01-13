@@ -33,7 +33,7 @@ function SigninSignup({children, className}) {
           'Content-Type': 'multipart/form-data'
         }
       });
-      const productAddedSound = new Audio("../../../public/audio/mixkit-kids-cartoon-close-bells-2256.mp3"); //fro sound
+      const productAddedSound = new Audio("/audio/mixkit-kids-cartoon-close-bells-2256.mp3"); //fro sound
       productAddedSound.play();
 
       toast.success("Product added successfully");

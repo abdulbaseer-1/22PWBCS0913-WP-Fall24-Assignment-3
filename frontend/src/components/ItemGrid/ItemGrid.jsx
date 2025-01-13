@@ -67,7 +67,7 @@ function ItemGrid() {
             }
 
             //loading sound
-            const addToCartSound = new Audio("../../../public/audio/mixkit-kids-cartoon-close-bells-2256.mp3");
+            const addToCartSound = new Audio("/audio/mixkit-kids-cartoon-close-bells-2256.mp3");
             //check if redy to play
             addToCartSound.oncanplaythrough = () => {
                 console.log("Audio is loaded and ready to play.");
@@ -96,7 +96,7 @@ function ItemGrid() {
         try {
             const response = await axios.delete(`${URL}/api/products/${productId}`);
             if (response.status === 200) {
-                const deleteSound = new Audio("../../../public/audio/mixkit-achievement-bell-600.mp3"); //fro sound
+                const deleteSound = new Audio("/audio/mixkit-achievement-bell-600.mp3"); //fro sound
                 deleteSound.load();
                 deleteSound.play().catch(err => {
                     console.error("Error playing sound:", err);
