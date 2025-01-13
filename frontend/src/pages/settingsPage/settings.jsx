@@ -29,7 +29,7 @@ function Settings() {
         
         await new Promise(resolve => setTimeout(resolve, 100));
         
-        window.location.href = "/SigninSignup";
+        navigate("/SigninSignup");
     } catch (error) {
         console.error("Logout error:", error);
         alert("Logout failed. Please try again.");
