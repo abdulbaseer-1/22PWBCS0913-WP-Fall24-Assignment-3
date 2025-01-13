@@ -1,0 +1,167 @@
+.header {
+  /* Base container styling */
+  position: relative;
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  /* This ensures the banner gradient looks good on all screens */
+  background: linear-gradient(135deg,
+    rgba(44, 62, 80, 0.95),
+    rgba(52, 152, 219, 0.45)
+  );
+}
+
+/* Banner image styling */
+.header > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* This creates a nice blend with the gradient */
+  mix-blend-mode: overlay;
+}
+
+/* Logo container positioning */
+.logo {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  z-index: 3;
+  padding: 12px;
+  background: transparent;
+  backdrop-filter: blur(1px);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+/* Logo image sizing */
+.logoImage {
+  height: 50px;
+  width: auto;
+  /* Ensures logo is visible on any background */
+  filter: brightness(0) invert(1) drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
+}
+
+/* Navigation container */
+.navbarContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  z-index: 2;
+}
+
+/* Cart styling */
+.cart {
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  z-index: 3;
+  padding: 12px;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cart:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+/* Cart icon sizing */
+.cartIcon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+/* Tablet breakpoint */
+@media screen and (max-width: 768px) {
+  .header {
+    height: 70px;
+  }
+
+  .logo {
+    left: 20px;
+    padding: 8px;
+  }
+
+  .logoImage {
+    height: 40px;
+  }
+
+  .navbarContainer {
+    gap: 24px;
+  }
+
+  .cart {
+    right: 20px;
+    padding: 8px;
+  }
+
+  .cartIcon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Mobile breakpoint */
+@media screen and (max-width: 480px) {
+  .header {
+    height: 60px;
+  }
+
+  .logo {
+    left: 15px;
+    padding: 6px;
+  }
+
+  .logoImage {
+    height: 35px;
+  }
+
+  .navbarContainer {
+    gap: 16px;
+    width: auto;
+    /* Ensure navigation stays centered but doesn't overflow */
+    padding: 0 60px;
+  }
+
+  .cart {
+    right: 15px;
+    padding: 6px;
+  }
+
+  .cartIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Ensure smooth performance */
+@media (prefers-reduced-motion: reduce) {
+  .logo,
+  .cart {
+    transition: none;
+  }
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(1px)) {
+  .logo,
+  .cart {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}

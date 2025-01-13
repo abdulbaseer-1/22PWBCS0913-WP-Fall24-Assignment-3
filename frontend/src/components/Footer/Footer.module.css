@@ -1,0 +1,94 @@
+/* Footer Styling */
+.footer {
+    background-color: #1e3a5f; /* Vibrant dark blue */
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Website summary styling */
+.website-summary h5 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.website-summary p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact grid styling */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.contact-item {
+    text-align: center;
+    width: 120px;
+}
+
+.contact-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #00d4ff; /* Vibrant cyan on hover */
+}
+
+/* Centering and styling the images */
+.contact-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    padding: 5px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-item img:hover {
+    transform: scale(1.1);
+    border-color: #00d4ff; /* Cyan border on hover */
+}
+
+.contact-item p {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .website-summary p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .contact-item {
+        width: 100px;
+    }
+
+    .contact-item img {
+        width: 40px;
+        height: 40px;
+    }
+}
