@@ -13,7 +13,11 @@ function Cart({ className }) {
     const { cartItems, setCartItems, totalPrice, setTotalPrice } = useCart();
 
     useEffect(() => {
-        fetchCart();
+        const interval = setInterval(() => { // instead of counter i used setInterval
+            fetchCart();
+          }, 1000);
+        
+          return () => clearInterval(interval);
     }, []);
 
     const fetchCart = async () => {
