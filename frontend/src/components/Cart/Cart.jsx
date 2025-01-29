@@ -15,7 +15,7 @@ function Cart({ className }) {
     useEffect(() => {
         const interval = setInterval(() => { // instead of counter i used setInterval
             fetchCart();
-          }, 1000);
+          }, 50);
         
           return () => clearInterval(interval);
     }, []);
