@@ -128,7 +128,7 @@ function ItemGrid() {
                             <img src={item.image} alt={item.name} className={styles.itemImage} />
                             <h2 className={styles.itemName}>{item.name}</h2>
                             <p className={styles.itemDescription}>{item.description}</p>
-                            <p className={styles.itemPrice}>${item.price}</p>
+                            <p className={styles.itemPrice}>Rs.{item.price}</p>
                             <button 
                                 className={styles.addToCartButton} 
                                 onClick={() => addToCart(item._id)}
