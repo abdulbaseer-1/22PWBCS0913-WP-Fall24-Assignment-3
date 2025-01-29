@@ -98,7 +98,7 @@ function Cart({ className }) {
                             {cartItems.map((item) => (
                                 <tr key={item.productId}>
                                     <td>{item.name}</td>
-                                    <td>${item.price}</td>
+                                    <td>Rs.{item.price}</td>
                                     <td>
                                         <input
                                             type="number"
@@ -117,7 +117,7 @@ function Cart({ className }) {
                     </table>
                 )}
             </div>
-            <h2>Total Price: ${totalPrice?.toFixed(2) || '0.00'}</h2>
+            <h2>Total Price: Rs.{totalPrice?.toFixed(2) || '0.00'}</h2>
         </div>
     );
 }
