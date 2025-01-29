@@ -11,7 +11,7 @@ if (!URL) {
 
 function Cart({ className }) {
     const { cartItems, setCartItems, totalPrice, setTotalPrice } = useCart();
-    const [counter, setCounter] = usestate(0);
+    const [counter, setCounter] = useState(0);
     
     useEffect(() => {
         fetchCart();
