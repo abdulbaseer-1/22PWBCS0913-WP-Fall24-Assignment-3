@@ -107,7 +107,7 @@ function Cart({ className }) {
                                             onChange={(e) => updateQuantity(item.productId, parseInt(e.target.value))}
                                         />
                                     </td>
-                                    <td>${(item.price * item.quantity).toFixed(2)}</td>
+                                    <td>Rs.{(item.price * item.quantity).toFixed(2)}</td>
                                     <td>
                                         <button onClick={() => removeItem(item.productId)}>Remove</button>
                                     </td>
