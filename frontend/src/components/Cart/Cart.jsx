@@ -11,14 +11,12 @@ if (!URL) {
 
 function Cart({ className }) {
     const { cartItems, setCartItems, totalPrice, setTotalPrice } = useCart();
-    const [counter, setCounter] = useState(0);
     
     useEffect(() => {
-        fetchCart();
         const interval = setInterval(() => {
-            setCounter(counter+1);
-          }, 500);
-    }, [counter]);
+            fetchCart();
+            }, 500);
+    }, []);
 
     const fetchCart = async () => {
         try {
